@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller 4</title>
+  </head>
+  <body>
+    <section>
+      <h1>Punto 1</h1>
+      <p>
+        Desarrolle un programa en Java Script que conceda el acceso a un usuario
+        según la edad y si se encuentra inscrito en el evento. Si la edad está
+        entre 18 y 25 años y está inscrito, el programa debe emitir un mensaje
+        que diga puede pasar, “Tienes n Años” en caso contrario, la persona no
+        puede pasar, “Solo tienes” n “Años”.
+      </p>
+      <div id="punto1">
+        <label for="edad">Ingrese su edad:</label>
+        <input type="number" id="edad" name="edad" />
+        <br />
+        <label for="inscrito">¿Está inscrito en el evento?</label>
+        <input type="checkbox" id="inscrito" name="inscrito" />
+        <br />
+        <button onclick="verificarAcceso()">Verificar Acceso</button>
+        <p id="resultado"></p>
+      </div>
+    </section>
+    <section>
+      <h1>Punto 2</h1>
+      <p>
+        Desarrolle un programa en Js para determinar si un estudiante tiene
+        derecho a recibir una beca, de acuerdo con los criterios de asignación
+        establecidos por la universidad. La Aplicación le debe pedir los datos y
+        mostrar quién gana la beca y el valor de la misma. El estudiante tiene
+        derecho siempre y cuando: Viva a más de 5 km de distancia de la
+        Universidad. Sus ingresos familiares sean menores $600.000 El estrato
+        sea uno o dos. La beca es del 44% sobre el SMLV.
+      </p>
+      <div id="punto2">
+        <label for="distancia"
+          >Ingrese la distancia a la universidad (km):</label
+        >
+        <input type="number" id="distancia" name="distancia" />
+        <br />
+        <label for="ingresos">Ingrese los ingresos familiares ($):</label>
+        <input type="number" id="ingresos" name="ingresos" />
+        <br />
+        <label for="estrato">Ingrese el estrato (1 o 2):</label>
+        <input type="number" id="estrato" name="estrato" />
+        <br />
+        <button onclick="verificarBeca()">Verificar Beca</button>
+        <p id="resultadoBeca"></p>
+      </div>
+    </section>
+    <section>
+      <h1>Punto 3</h1>
+      <p>
+        Desarrollo de un Sistema Automatizado de Nómina Web Una empresa requiere
+        una aplicación web para automatizar el cálculo de la nómina mensual de
+        sus trabajadores. Las condiciones laborales y políticas de pago se
+        estructuran bajo los siguientes parámetros: Jornada Laboral y Salario
+        Base: El empleado cumple una jornada de 48 horas semanales. La tarifa
+        base inicial se establece en $6.471 por hora, valor que puede ser
+        modificado según el contrato. Auxilio de Transporte: Se otorgará este
+        beneficio únicamente si el salario bruto del trabajador es inferior a
+        dos (2) salarios mínimos legales vigentes (SMLV). Horas Extras: Debido a
+        la fluctuación en el flujo de pedidos, el empleado acumula mensualmente
+        una cantidad variable de horas extras diurnas. Deducciones Fijas: Se
+        aplica un descuento del 3% sobre el salario bruto para el servicio de
+        EMI y un 2% destinado a la mensualidad de la funeraria. Deducciones
+        Variables: El sistema debe permitir ingresar un valor variable
+        correspondiente al aporte voluntario del fondo de empleados. Demandas
+        por Alimentos: El trabajador registra una novedad por demanda de
+        alimentos. Si su salario bruto mensual supera los $3.740.000, el sistema
+        deberá aplicar automáticamente una retención equivalente al 30% del
+        salario bruto por este concepto. Requerimiento Técnico: Desarrollar una
+        interfaz web (HTML y JavaScript) que reciba las variables de entrada y
+        procese la liquidación. La aplicación debe calcular y desplegar en
+        pantalla de forma clara: el salario bruto mensual, el desglose y total
+        de las deducciones aplicadas, el estado detallado de la demanda de
+        alimentos, y el salario neto definitivo a pagar.
+      </p>
+        <div id="punto3">
+            <label for="horasExtras">Ingrese las horas extras diurnas:</label>
+            <input type="number" id="horasExtras" name="horasExtras" />
+            <br />
+            <label for="auxilioTransporte"
+            >Ingrese el auxilio de transporte ($):</label>
+            <input type="number" id="auxilioTransporte" name="auxilioTransporte" />
+            <br />
+            <label for="aporteVoluntario"
+            >Ingrese el aporte voluntario del fondo de empleados ($):</label
+            >
+            <input type="number" id="aporteVoluntario" name="aporteVoluntario" />
+            <br />
+            <label for="demandaAlimentos">Tienes una demanda por alimentos?</label>
+            <input type="checkbox" id="demandaAlimentos" name="demandaAlimentos" />
+            <br />
+            <button onclick="calcularNomina()">Calcular Nómina</button>
+            <p id="resultadoNomina"></p>
+    </section>
+    <section>
+        <h1>Punto 4</h1>
+        <p>En Colombia hay medidas que regulan la velocidad de los automóviles según las zonas donde se encuentre. A continuación, se listan las restricciones.
+30KM/H Zonas Escolares 
+60KM/H Vías Urbanas 
+80KM/H Vías Rurales 
+100KM/H Rutas Nacionales 
+Desarrolle un programa que permita determinar según una velocidad X captada por una cámara de forma automática, en qué zonas estoy transitando, la velocidad a la que va y máximo a cuál podría ir. Se imprime la fecha y hora de la lectura.
+Usted debe utilizar condicionales para resolver este ejercicio y aplicar todo lo visto.
+        </p>
+        <div id="punto4">
+            <label for="velocidad">Ingrese la velocidad captada por la cámara (KM/H):</label>
+            <input type="number" id="velocidad" name="velocidad" />
+            <br />
+            <label for="zona">Seleccione la zona:</label>
+            <select id="zona" name="zona">
+                <option value="escolar">Zonas Escolares (30 KM/H)</option>
+                <option value="urbana">Vías Urbanas (60 KM/H)</option>
+                <option value="rural">Vías Rurales (80 KM/H)</option>
+                <option value="nacional">Rutas Nacionales (100 KM/H)</option>
+            </select>
+            <br />
+            <button onclick="verificarVelocidad()">Verificar Velocidad</button>
+            <p id="resultadoVelocidad"></p>
+        </div>
+    </section>
+    <section>
+        <h1>Punto 5</h1>
+        <p>En una entidad bancaria se brinda a los usuarios diferentes servicios y dependiendo de lo que requiera, la máquina dispensadora le genera un ticket con un consecutivo y lo direcciona para el área requerida.
+Se sabe que el menú de opciones ofrece 5 posibilidades:
+Si el usuario va para el servicio de caja, selecciona la opción 1
+Si va para servicio al cliente selecciona la opción 2.
+Si va para pago de impuestos elige la opción 3.
+Si se dirige para crédito hipotecario, presiona la opción 4.
+Cuando el usuario requiera realizar operaciones con tarjeta de crédito debe elegir la opción 5.
+
+En caso de que el usuario elija una opción que no esté en el menú, el sistema debe mostrar un mensaje que diga “Opción no válida”.
+Recuerde que el sistema debe imprimirle al usuario: el número del Ticket, Id de la sucursal, para qué servicio va y la fecha y hora actual.
+</p>
+    </section>
+
+    <script src="script_taller_4.js"></script>
+  </body>
+</html>

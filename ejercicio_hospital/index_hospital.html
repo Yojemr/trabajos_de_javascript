@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos hospitalarios</title>
+</head>
+<body>
+    <h1>Ejercicio de Hospital</h1>
+
+    <div id="Ingresos"></div>
+    <label for="nombrePaciente">Nombre del paciente:</label>
+    <input type="text" id="nombrePaciente" /><br>
+    <label for="documentoPaciente">Documento del paciente:</label>
+    <input type="number" id="documentoPaciente" /><br>
+    <label for="medicamentos">Ingrese el valor de los medicamentos:</label>
+    <input type="number" id="medicamentos" /><br>
+    <label for="hospitalizacion">Ingrese el valor de la hospitalización:</label>
+    <input type="number" id="hospitalizacion" /><br>
+    <label for="cirugia">Ingrese el valor de la cirugía:</label>
+    <input type="number" id="cirugia" /><br>
+    <label for="examenes">Ingrese el valor de los exámenes médicos:</label>
+    <input type="number" id="examenes" /><br>
+    <button id="calcular" onclick="calcularGastos()">Calcular</button><br>
+    <div id="Resultados"></div>
+
+    <script src="hospital_script.js"></script>
+</body>
+</html>
