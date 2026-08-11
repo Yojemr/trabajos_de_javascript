@@ -81,64 +81,88 @@
         de las deducciones aplicadas, el estado detallado de la demanda de
         alimentos, y el salario neto definitivo a pagar.
       </p>
-        <div id="punto3">
-            <label for="horasExtras">Ingrese las horas extras diurnas:</label>
-            <input type="number" id="horasExtras" name="horasExtras" />
-            <br />
-            <label for="auxilioTransporte"
-            >Ingrese el auxilio de transporte ($):</label>
-            <input type="number" id="auxilioTransporte" name="auxilioTransporte" />
-            <br />
-            <label for="aporteVoluntario"
-            >Ingrese el aporte voluntario del fondo de empleados ($):</label
-            >
-            <input type="number" id="aporteVoluntario" name="aporteVoluntario" />
-            <br />
-            <label for="demandaAlimentos">Tienes una demanda por alimentos?</label>
-            <input type="checkbox" id="demandaAlimentos" name="demandaAlimentos" />
-            <br />
-            <button onclick="calcularNomina()">Calcular Nómina</button>
-            <p id="resultadoNomina"></p>
+      <div id="punto3">
+        <label for="horasExtras">Ingrese las horas extras diurnas:</label>
+        <input type="number" id="horasExtras" name="horasExtras" />
+        <br />
+        <label for="auxilioTransporte"
+          >Ingrese el auxilio de transporte ($):</label
+        >
+        <input type="number" id="auxilioTransporte" name="auxilioTransporte" />
+        <br />
+        <label for="aporteVoluntario"
+          >Ingrese el aporte voluntario del fondo de empleados ($):</label
+        >
+        <input type="number" id="aporteVoluntario" name="aporteVoluntario" />
+        <br />
+        <label for="demandaAlimentos">Tienes una demanda por alimentos?</label>
+        <input type="checkbox" id="demandaAlimentos" name="demandaAlimentos" />
+        <br />
+        <button onclick="calcularNomina()">Calcular Nómina</button>
+        <p id="resultadoNomina"></p>
+      </div>
     </section>
     <section>
-        <h1>Punto 4</h1>
-        <p>En Colombia hay medidas que regulan la velocidad de los automóviles según las zonas donde se encuentre. A continuación, se listan las restricciones.
-30KM/H Zonas Escolares 
-60KM/H Vías Urbanas 
-80KM/H Vías Rurales 
-100KM/H Rutas Nacionales 
-Desarrolle un programa que permita determinar según una velocidad X captada por una cámara de forma automática, en qué zonas estoy transitando, la velocidad a la que va y máximo a cuál podría ir. Se imprime la fecha y hora de la lectura.
-Usted debe utilizar condicionales para resolver este ejercicio y aplicar todo lo visto.
-        </p>
-        <div id="punto4">
-            <label for="velocidad">Ingrese la velocidad captada por la cámara (KM/H):</label>
-            <input type="number" id="velocidad" name="velocidad" />
-            <br />
-            <label for="zona">Seleccione la zona:</label>
-            <select id="zona" name="zona">
-                <option value="escolar">Zonas Escolares (30 KM/H)</option>
-                <option value="urbana">Vías Urbanas (60 KM/H)</option>
-                <option value="rural">Vías Rurales (80 KM/H)</option>
-                <option value="nacional">Rutas Nacionales (100 KM/H)</option>
+      <h1>Punto 4</h1>
+      <p>
+        En Colombia hay medidas que regulan la velocidad de los automóviles
+        según las zonas donde se encuentre. A continuación, se listan las
+        restricciones. 30KM/H Zonas Escolares 60KM/H Vías Urbanas 80KM/H Vías
+        Rurales 100KM/H Rutas Nacionales Desarrolle un programa que permita
+        determinar según una velocidad X captada por una cámara de forma
+        automática, en qué zonas estoy transitando, la velocidad a la que va y
+        máximo a cuál podría ir. Se imprime la fecha y hora de la lectura. Usted
+        debe utilizar condicionales para resolver este ejercicio y aplicar todo
+        lo visto.
+      </p>
+      <div id="punto4">
+        <label for="velocidad"
+          >Ingrese la velocidad captada por la cámara (KM/H):</label
+        >
+        <input type="number" id="velocidad" name="velocidad" />
+        <br />
+        <label for="zona">Seleccione la zona:</label>
+        <select id="zona" name="zona">
+          <option value="escolar">Zonas Escolares (30 KM/H)</option>
+          <option value="urbana">Vías Urbanas (60 KM/H)</option>
+          <option value="rural">Vías Rurales (80 KM/H)</option>
+          <option value="nacional">Rutas Nacionales (100 KM/H)</option>
+        </select>
+        <br />
+        <button onclick="verificarVelocidad()">Verificar Velocidad</button>
+        <p id="resultadoVelocidad"></p>
+      </div>
+    </section>
+    <section>
+      <h1>Punto 5</h1>
+      <p>
+        En una entidad bancaria se brinda a los usuarios diferentes servicios y
+        dependiendo de lo que requiera, la máquina dispensadora le genera un
+        ticket con un consecutivo y lo direcciona para el área requerida. Se
+        sabe que el menú de opciones ofrece 5 posibilidades: Si el usuario va
+        para el servicio de caja, selecciona la opción 1 Si va para servicio al
+        cliente selecciona la opción 2. Si va para pago de impuestos elige la
+        opción 3. Si se dirige para crédito hipotecario, presiona la opción 4.
+        Cuando el usuario requiera realizar operaciones con tarjeta de crédito
+        debe elegir la opción 5. En caso de que el usuario elija una opción que
+        no esté en el menú, el sistema debe mostrar un mensaje que diga “Opción
+        no válida”. Recuerde que el sistema debe imprimirle al usuario: el
+        número del Ticket, Id de la sucursal, para qué servicio va y la fecha y
+        hora actual.
+      </p>
+        <div id="punto5">
+            <label for="opcion">Seleccione el servicio:</label>
+            <select id="opcion" name="opcion">
+            <option value="1">Caja</option>
+            <option value="2">Servicio al Cliente</option>
+            <option value="3">Pago de Impuestos</option>
+            <option value="4">Crédito Hipotecario</option>
+            <option value="5">Operaciones con Tarjeta de Crédito</option>
             </select>
             <br />
-            <button onclick="verificarVelocidad()">Verificar Velocidad</button>
-            <p id="resultadoVelocidad"></p>
+            <button onclick="generarTicket()">Generar Ticket</button>
+            <p id="resultadoTicket"></p>
         </div>
-    </section>
-    <section>
-        <h1>Punto 5</h1>
-        <p>En una entidad bancaria se brinda a los usuarios diferentes servicios y dependiendo de lo que requiera, la máquina dispensadora le genera un ticket con un consecutivo y lo direcciona para el área requerida.
-Se sabe que el menú de opciones ofrece 5 posibilidades:
-Si el usuario va para el servicio de caja, selecciona la opción 1
-Si va para servicio al cliente selecciona la opción 2.
-Si va para pago de impuestos elige la opción 3.
-Si se dirige para crédito hipotecario, presiona la opción 4.
-Cuando el usuario requiera realizar operaciones con tarjeta de crédito debe elegir la opción 5.
-
-En caso de que el usuario elija una opción que no esté en el menú, el sistema debe mostrar un mensaje que diga “Opción no válida”.
-Recuerde que el sistema debe imprimirle al usuario: el número del Ticket, Id de la sucursal, para qué servicio va y la fecha y hora actual.
-</p>
     </section>
 
     <script src="script_taller_4.js"></script>
