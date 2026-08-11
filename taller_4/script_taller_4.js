@@ -98,33 +98,113 @@ function verificarVelocidad() {
     `<br>Velocidad captada: ${velocidad} KM/H.<br>Límite máximo: ${velocidadMaxima} KM/H.<br>Fecha y hora: ${fechaHora}`;
 }
 
+// Punto 5
+
+function determinarCategoriaEdad() {
+  let edad = parseInt(document.getElementById("edadCategoria").value);
+  let categoria;
+
+  if (isNaN(edad) || edad < 0) {
+    document.getElementById("resultadoCategoriaEdad").innerHTML =
+      "Ingrese una edad válida.";
+    return;
+  }
+
+  if (edad <= 5) {
+    categoria = "Infante";
+  } else if (edad <= 10) {
+    categoria = "Niño";
+  } else if (edad <= 15) {
+    categoria = "Pre adolescente";
+  } else if (edad <= 18) {
+    categoria = "Adolescente";
+  } else if (edad <= 25) {
+    categoria = "Pre adulto";
+  } else if (edad <= 40) {
+    categoria = "Adulto";
+  } else if (edad <= 55) {
+    categoria = "Pre anciano";
+  } else {
+    categoria = "Anciano";
+  }
+
+  document.getElementById("resultadoCategoriaEdad").innerHTML =
+    `La persona pertenece a la categoría: ${categoria}.`;
+}
+
 // Punto 6
+
+let numeroTicket = 1;
+
 function generarTicket() {
   let opcion = document.getElementById("opcion").value;
   let fechaHora = new Date().toLocaleString();
   let sucursal = Math.floor(Math.random() * 100) + 1;
+  let servicio;
 
   if (opcion === "1") {
-    document.getElementById("resultadoTicket").innerHTML =
-      `Ticket generado para el servicio de caja.<br>Fecha y hora: ${fechaHora}<br>Sucursal: ${sucursal}`;
+    servicio = "Caja";
   } else if (opcion === "2") {
-    document.getElementById("resultadoTicket").innerHTML =
-      `Ticket generado para el servicio de atención al cliente.<br>Fecha y hora: ${fechaHora}<br>Sucursal: ${sucursal}`;
+    servicio = "Servicio al Cliente";
+  } else if (opcion === "3") {
+    servicio = "Pago de Impuestos";
+  } else if (opcion === "4") {
+    servicio = "Crédito Hipotecario";
+  } else if (opcion === "5") {
+    servicio = "Operaciones con Tarjeta de Crédito";
+  } else {
+    document.getElementById("resultadoTicket").innerHTML = "Opción no válida";
+    return;
   }
-  else if (opcion === "3") {
-    document.getElementById("resultadoTicket").innerHTML =
-      `Ticket generado para el pago de impuestos.<br>Fecha y hora: ${fechaHora}<br>Sucursal: ${sucursal}`;
+
+  document.getElementById("resultadoTicket").innerHTML =
+    `Número del ticket: ${numeroTicket}<br>` +
+    `Id de la sucursal: ${sucursal}<br>` +
+    `Servicio: ${servicio}<br>` +
+    `Fecha y hora: ${fechaHora}`;
+
+  numeroTicket++;
+}
+
+// Punto 7
+
+function calcularCompraLicor() {
+  let opcion = Number(document.getElementById("opcionLicor").value);
+  let unidades = Number(document.getElementById("unidadesLicor").value);
+  let licor;
+  let precio;
+
+  if (opcion === 1) {
+    licor = "Ron";
+    precio = 10;
+  } else if (opcion === 2) {
+    licor = "Vodka";
+    precio = 12;
+  } else if (opcion === 3) {
+    licor = "Whisky";
+    precio = 15;
+  } else if (opcion === 4) {
+    licor = "Tequila";
+    precio = 18;
+  } else if (opcion === 5) {
+    licor = "Ginebra";
+    precio = 20;
+  } else {
+    document.getElementById("resultadoLicor").innerHTML = "Opción no válida";
+    return;
   }
-  else if (opcion === "4") {
-    document.getElementById("resultadoTicket").innerHTML =
-      `Ticket generado para el crédito hipotecario.<br>Fecha y hora: ${fechaHora}<br>Sucursal: ${sucursal}`;
+
+  if (isNaN(unidades) || unidades <= 0 || unidades % 1 !== 0) {
+    document.getElementById("resultadoLicor").innerHTML =
+      "Cantidad de unidades no válida";
+    return;
   }
-  else if (opcion === "5") {
-    document.getElementById("resultadoTicket").innerHTML =
-      `Ticket generado para operaciones con tarjeta de crédito.<br>Fecha y hora: ${fechaHora}<br>Sucursal: ${sucursal}`;
-  }
-  else {
-    document.getElementById("resultadoTicket").innerHTML =
-      `Opción inválida. Por favor, selecciona una opción válida.<br>Fecha y hora: ${fechaHora}<br>Sucursal: ${sucursal}`;
-  }
+
+  let total = precio * unidades;
+
+  document.getElementById("resultadoLicor").innerHTML =
+    `Licor seleccionado: ${licor}<br>` +
+    `Precio por unidad: $${precio}<br>` +
+    `Total a pagar: $${total}<br>` +
+    "¡Gracias por su visita!";
 }

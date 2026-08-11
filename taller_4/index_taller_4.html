@@ -136,6 +136,23 @@
     <section>
       <h1>Punto 5</h1>
       <p>
+        Desarrolle un programa que permita, por medio de la edad de una
+        persona, determinar la categoría a la que pertenece: de 0 a 5 años,
+        infante; de 6 a 10, niño; de 11 a 15, pre adolescente; de 16 a 18,
+        adolescente; de 19 a 25, pre adulto; de 26 a 40, adulto; de 41 a 55,
+        pre anciano; y de 56 años en adelante, anciano.
+      </p>
+      <div id="punto5">
+        <label for="edadCategoria">Ingrese la edad de la persona:</label>
+        <input type="number" id="edadCategoria" name="edadCategoria" />
+        <br />
+        <button onclick="determinarCategoriaEdad()">Determinar Categoría</button>
+        <p id="resultadoCategoriaEdad"></p>
+      </div>
+    </section>
+    <section>
+      <h1>Punto 6</h1>
+      <p>
         En una entidad bancaria se brinda a los usuarios diferentes servicios y
         dependiendo de lo que requiera, la máquina dispensadora le genera un
         ticket con un consecutivo y lo direcciona para el área requerida. Se
@@ -150,19 +167,45 @@
         número del Ticket, Id de la sucursal, para qué servicio va y la fecha y
         hora actual.
       </p>
-        <div id="punto5">
-            <label for="opcion">Seleccione el servicio:</label>
-            <select id="opcion" name="opcion">
-            <option value="1">Caja</option>
-            <option value="2">Servicio al Cliente</option>
-            <option value="3">Pago de Impuestos</option>
-            <option value="4">Crédito Hipotecario</option>
-            <option value="5">Operaciones con Tarjeta de Crédito</option>
-            </select>
-            <br />
-            <button onclick="generarTicket()">Generar Ticket</button>
-            <p id="resultadoTicket"></p>
-        </div>
+      <div id="punto6">
+        <label for="opcion">Seleccione el servicio:</label>
+        <select id="opcion" name="opcion">
+          <option value="1">Caja</option>
+          <option value="2">Servicio al Cliente</option>
+          <option value="3">Pago de Impuestos</option>
+          <option value="4">Crédito Hipotecario</option>
+          <option value="5">Operaciones con Tarjeta de Crédito</option>
+        </select>
+        <br />
+        <button onclick="generarTicket()">Generar Ticket</button>
+        <p id="resultadoTicket"></p>
+      </div>
+    </section>
+
+    <section>
+      <h1>Punto 7</h1>
+      <p>
+        Desarrolle un programa que simule un menú de licores en una tienda.
+        El usuario debe seleccionar un licor, ingresar la cantidad de unidades
+        y el programa debe calcular el precio total de la compra.
+      </p>
+      <div id="punto7">
+        <p>
+          1. Ron ($10)<br />
+          2. Vodka ($12)<br />
+          3. Whisky ($15)<br />
+          4. Tequila ($18)<br />
+          5. Ginebra ($20)
+        </p>
+        <label for="opcionLicor">Ingrese el número del licor (1 a 5):</label>
+        <input type="number" id="opcionLicor" name="opcionLicor" />
+        <br />
+        <label for="unidadesLicor">Ingrese la cantidad de unidades:</label>
+        <input type="number" id="unidadesLicor" name="unidadesLicor" />
+        <br />
+        <button onclick="calcularCompraLicor()">Calcular Compra</button>
+        <p id="resultadoLicor"></p>
+      </div>
     </section>
 
     <script src="script_taller_4.js"></script>
