@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Parcial 1</h1>
+        <p>Desarrolle un programa en Java Script que conceda el acceso a un usuario según la edad y si se encuentra inscrito en el evento. Si la edad está entre 18 y 25 años y está inscrito, el programa debe emitir un mensaje que diga puede pasar, “Tienes n Años” en caso contrario, la persona no puede pasar, “Solo tienes” n “Años”.</p>
+        <div id="punto1">
+            <label for="edad">Ingrese su edad:</label>
+            <input type="number" id="edad" name="edad">
+            <br>
+            <label for="inscrito">¿Está inscrito en el evento?</label>
+            <input type="checkbox" id="inscrito" name="inscrito">
+            <br>
+            <button onclick="verificarAcceso()">Verificar Acceso</button>
+            <p id="resultado"></p>
+        </div>
+    </section>
+    <script src="parcial_1.js" ></script>
+</body>
+</html>
