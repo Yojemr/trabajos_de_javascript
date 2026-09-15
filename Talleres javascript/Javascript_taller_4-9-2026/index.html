@@ -1,0 +1,118 @@
+<!-- Declaración del estándar HTML5 -->
+<!DOCTYPE html>
+<!-- Etiqueta raíz especificando el idioma del contenido (español)[cite: 4] -->
+<html lang="es">
+<head>
+  <!-- Definición de la codificación de caracteres para soportar tildes y caracteres especiales[cite: 4] -->
+  <meta charset="UTF-8">
+  <!-- Configuración de la vista para que la página sea totalmente responsiva en móviles[cite: 4] -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título que aparece en la pestaña del navegador[cite: 4] -->
+  <title>Factura Interactiva</title>
+  <!-- Enlace al archivo CSS externo donde están los estilos visuales[cite: 4] -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Contenedor global para limitar el ancho y centrar todo el diseño[cite: 4] -->
+  <div class="container">
+
+    <!-- Encabezado visual de la aplicación[cite: 4] -->
+    <header>
+      <h1>Factura de Venta</h1>
+      <p class="subtitle">Ejercicio de Manipulación del DOM y Eventos en JavaScript</p>
+    </header>
+
+    <!-- SECCIÓN 1: Formulario de captura de datos[cite: 4] -->
+    <section class="card form-section">
+      <h2>Agregar Producto</h2>
+
+      <!-- Formulario principal. 'onsubmit="return false;"' evita el envío nativo/recarga de página al presionar Enter[cite: 4] -->
+      <form id="formFactura" onsubmit="return false;">
+        <div class="form-grid">
+
+          <!-- Campo para ingresar el nombre o descripción del producto[cite: 4] -->
+          <div class="form-group">
+            <label for="inputProducto">Descripción del Producto</label>
+            <input type="text" id="inputProducto" placeholder="Ej. Cuaderno Universitario" required>
+          </div>
+          
+          <!-- Campo para la cantidad (restringido a números enteros positivos a través de min y step)[cite: 4] -->
+          <div class="form-group">
+            <label for="inputCantidad">Cantidad</label>
+            <input type="number" id="inputCantidad" placeholder="Ej. 2" min="1" step="1" required>
+          </div>
+          
+          <!-- Campo para el precio (permite valores decimales con step="0.01")[cite: 4] -->
+          <div class="form-group">
+            <label for="inputPrecio">Precio Unitario ($)</label>
+            <input type="number" id="inputPrecio" placeholder="Ej. 3500.00" min="0.01" step="0.01" required>
+          </div>
+        </div>
+
+        <!-- Botón de acción al que se le vincula el escuchador de eventos 'click' desde JS[cite: 2, 4] -->
+        <button type="button" id="btnAgregar" class="btn btn-primary">
+          + Agregar a Factura
+        </button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN 2: Tabla interactiva para listar los elementos añadidos[cite: 4] -->
+    <section class="card table-section">
+      <h2>Detalle de la Factura</h2>
+
+      <!-- Envoltorio con scroll horizontal cuando la pantalla es muy pequeña[cite: 3, 4] -->
+      <div class="table-responsive">
+        <table id="tablaFactura">
+          <!-- Encabezados fijos de las columnas[cite: 4] -->
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th class="text-center">Cantidad</th>
+              <th class="text-right">Precio Unitario</th>
+              <th class="text-right">Subtotal</th>
+              <th class="text-center">Acción</th>
+            </tr>
+          </thead>
+
+          <!-- Identificador 'cuerpoTabla': aquí es donde JS inserta dinámicamente cada fila (<tr>)[cite: 2, 4] -->
+          <tbody id="cuerpoTabla">
+            <!-- Las filas se insertan dinámicamente con JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Estado vacío inicial que se oculta desde JS al agregar el primer producto[cite: 2, 4] -->
+      <div id="mensajeVacio" class="empty-state">
+        <p>No hay productos agregados a la factura aún.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Desglose dinámico de totales[cite: 4] -->
+    <section class="card summary-section">
+      <div class="summary-box">
+        <!-- Span id="montoSubtotal": recibe el cálculo sumado de todos los ítems[cite: 2, 4] -->
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="montoSubtotal">$0.00</span>
+        </div>
+
+        <!-- Span id="montoIva": recibe el resultado de multiplicar el subtotal por el 19%[cite: 2, 4] -->
+        <div class="summary-row">
+          <span>IVA (19%):</span>
+          <span id="montoIva">$0.00</span>
+        </div>
+
+        <!-- Span id="montoTotal": recibe la suma final del subtotal + IVA[cite: 2, 4] -->
+        <div class="summary-row total-row">
+          <span>Total a Pagar:</span>
+          <span id="montoTotal">$0.00</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Inclusión de JavaScript al final del body para asegurar que el DOM cargó completo antes de manipularlo[cite: 4] -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Estilos generales de la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 16px;
+  text-align: center;
+  background: url("imagenes/fondo.jpg") no-repeat center center / cover;
+}
+
+/* Contenedor principal */
+.contenedor {
+  width: 700px;
+  max-width: 100%;
+  min-height: 500px;
+  padding: 40px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título de la aplicación */
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+/* Campo para ingresar una tarea */
+#ingresar-tarea {
+  width: 80%;
+  height: 50px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 25px;
+  border: 4px solid #404040;
+  border-radius: 10px;
+}
+
+/* Botón principal */
+#boton-crear {
+  width: 150px;
+  height: 60px;
+  padding: 10px;
+  color: white;
+  background-color: #1312a8;
+  font-size: 22px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#boton-crear:hover {
+  background-color: #0b0a79;
+}
+
+/* Espacio donde se muestran las tareas */
+#lista-de-tareas {
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* Apariencia de cada tarea */
+.tarea {
+  width: 100%;
+  min-height: 70px;
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #407ba6;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 25px;
+  text-align: left;
+}
+
+.tarea p {
+  max-width: 350px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Cambio visual de una tarea completada */
+.tarea.completada {
+  background-color: black;
+  border-color: black;
+  text-decoration: line-through;
+}
+
+/* Iconos de completar y eliminar */
+.iconos {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.iconos i {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icono-completar {
+  color: rgb(0, 255, 0);
+}
+
+.icono-eliminar {
+  color: white;
+}
+
+.icono-completar:hover,
+.icono-eliminar:hover {
+  background-color: rgba(255, 255, 255, 0.52);
+}
+
+/* Menú pequeño que explica y prueba cada grupo del taller */
+.controles {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  width: 330px;
+  max-width: calc(100% - 28px);
+  max-height: calc(100vh - 28px);
+  padding: 12px;
+  color: #202020;
+  background-color: rgba(255, 255, 255, 0.97);
+  border: 2px solid #202020;
+  border-radius: 12px;
+  text-align: left;
+  overflow-y: auto;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+}
+
+.controles summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botones-controles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.controles button {
+  width: 100%;
+  padding: 8px 10px;
+  color: white;
+  background-color: #235f8a;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.controles button:hover {
+  background-color: #173f5c;
+}
+
+#resultadoAccion {
+  margin: 12px 0 0;
+  padding: 10px;
+  background-color: #eef6fb;
+  border-left: 4px solid #235f8a;
+  white-space: pre-line;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding: 20px 12px 80px;
+  }
+
+  .contenedor {
+    min-height: 430px;
+    padding: 25px 18px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  #ingresar-tarea,
+  #lista-de-tareas {
+    width: 100%;
+  }
+
+  .tarea {
+    font-size: 19px;
+  }
+}

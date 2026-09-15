@@ -1,0 +1,129 @@
+/* Ajustes generales y fondo de la página */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: url("imagenes/coctel.jpg") no-repeat center center / cover;
+}
+
+/* Contenedor principal de la licorera */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 80vw;
+    max-width: 600px;
+    background-color: white;
+    border: 4px solid black;
+}
+
+/* Título de la página */
+h1 {
+    width: 100%;
+    margin: 10px 20px;
+    font-size: 3rem;
+}
+
+/* Lista de licores */
+ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin: 15px 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Colores propios de cada fila */
+.fondo-marron {
+    background-color: #aa5826;
+}
+
+.fondo-naranja {
+    background-color: #ff7b0f;
+}
+
+/* Menú plegable de respuestas */
+.resultados-dom {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 300px;
+    max-height: 78vh;
+    padding: 12px;
+    color: white;
+    text-align: left;
+    background-color: rgba(35, 24, 18, 0.94);
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.resultados-dom summary {
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+#respuestas {
+    margin-top: 12px;
+}
+
+.respuesta {
+    margin: 9px 0;
+    padding: 10px;
+    color: #2b211b;
+    background-color: #fff4e8;
+    border-left: 5px solid #ff7b0f;
+}
+
+.respuesta strong,
+.respuesta span {
+    display: block;
+}
+
+.respuesta p {
+    margin: 5px 0;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    #contenedor {
+        width: 95vw;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .lista {
+        font-size: 1.6rem;
+    }
+
+    .resultados-dom {
+        width: calc(100vw - 30px);
+        max-height: 55vh;
+    }
+}

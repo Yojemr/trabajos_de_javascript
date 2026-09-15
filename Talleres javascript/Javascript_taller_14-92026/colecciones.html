@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        /* Ejercicio 1 */
+        let notas = [7, 8, 6, 9, 8.5];
+        let suma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+        let promedio = suma / notas.length;
+        console.log("Ejercicio 1", promedio);
+
+        /* Ejercicio 2 */
+        let personas = [
+        { nombre: "Juan", edad: 30 },
+        { nombre: "María", edad: 25 },
+        { nombre: "Pedro", edad: 40 }
+        ];
+        let edades = personas.map(persona => persona.edad);
+        console.log("Ejercicio 2", edades);
+
+        /* Ejercicio 3 */
+        let numeros = [2, 3, 4, 5, 6];
+        let producto = numeros.reduce((total, numero) => total * numero, 1);
+        console.log("Ejercicio 3", producto);
+
+        /* Ejercicio 4*/
+        let elementos = ["rojo", "verde", "rosado", "fucsia", "amarillo", "morado"];
+        let elementoBuscado = "fucsia";
+        let cantidad = elementos.reduce((contador, elemento) => {
+        if (elemento === elementoBuscado) {
+            return contador + 1;
+        }
+        return contador;
+        }, 0);
+        console.log("Ejercicio 4", cantidad);
+
+        /* Ejercicio 5*/
+        let palabras = ["Hola", "a", "todos","sean","bienvenidos"];
+        let longitudTotal = palabras.reduce((total, palabra) => total + palabra.length, 0);
+        console.log("Ejercicio 5", longitudTotal);
+
+    </script>
+</body>
+</html>

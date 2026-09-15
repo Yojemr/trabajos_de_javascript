@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorera - Taller 3</title>
+
+    <!-- Archivos externos del proyecto -->
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon.svg">
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+    <!-- Contenedor principal que será modificado desde JavaScript -->
+    <div id="contenedor">
+        <h1 id="titulo">🍸<br>Licores de Marca</h1>
+
+        <!-- Lista utilizada para practicar clases y selectores -->
+        <ul id="listaLicores">
+            <li class="lista fondo-marron" id="oldpar">OldParr</li>
+            <li class="lista fondo-naranja">Ginebra</li>
+            <li class="lista fondo-marron" id="Buchanans">Buchanans</li>
+            <li class="lista fondo-naranja">Chivas</li>
+        </ul>
+
+        <a id="enlaceTienda" href="https://www.microsoft.com/es-co/">Ir a Microsoft</a>
+    </div>
+
+    <!-- Controles discretos para comprobar los resultados finales -->
+    <details class="controles">
+        <summary>Pruebas del DOM</summary>
+        <div class="botones">
+            <button id="botonConsultas" type="button">Consultas: puntos 0 al 10</button>
+            <button id="botonEstilos" type="button">Estilos: puntos 11 al 13</button>
+            <button id="botonTextos" type="button">Texto: puntos 14 al 18</button>
+            <button id="botonEnlace" type="button">Enlace: puntos 19 al 22</button>
+            <button id="botonClases" type="button">Clases: puntos 23 al 27</button>
+            <button id="botonCrear" type="button">Crear Importados: 28 y 29</button>
+            <button id="botonImportados" type="button">Eliminar Importados: punto 30</button>
+            <button id="botonLista" type="button">Eliminar lista: punto 31</button>
+            <button id="botonRestablecer" type="button">Restablecer</button>
+        </div>
+        <p id="resultadoAccion">Selecciona una opción para ver su resultado.</p>
+    </details>
+
+    <!-- Código de los ejercicios del DOM -->
+    <script src="App.js"></script>
+</body>
+</html>
