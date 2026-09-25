@@ -1,0 +1,35 @@
+[
+    {
+        "nombre" : "Juan",
+        "puesto" : "Desarrollador Web"
+    },
+    {
+        "nombre" : "Alejandra",
+        "puesto" : "Diseñadora gráfica"
+    },
+    {
+        "nombre" : "Pedro",
+        "puesto" : "Aplicaciones Móviles"
+    },
+
+    {
+        "nombre" : "Tatiana",
+        "puesto" : "Desarrollo Móvil"
+    },
+    {
+        "nombre" : "Janeth",
+        "puesto" : "Dev 5 estrellas"
+    },
+    {
+        "nombre" : "Yeremi web",
+        "puesto" : "Desarrollo  interfaces"
+    },
+    {
+        "nombre" : "David  sholts",
+        "puesto" : "Desarrollo  Frontend"
+    },
+    {
+        "nombre" : "Taliana  solis",
+        "puesto" : "Diseñadora"
+    }
+]
